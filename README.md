@@ -17,20 +17,29 @@ The OpenSMOKE++ library relies some third-party libraries for some important tas
 
 The Eigen++ and RapidXML libraries do not require precompilation, since they are entirely based on header files and they are provided together with the OpenSMOKE++ libraries. The Boost C++ libraries are not provided with OpenSMOKE++. Usually they are already available in your Linux distribution. If not, you need to install them.  
 
-If the distribution you are using is Ubuntu or SuSE, you can follow procedure 1 reported below.  
-
-If this is not the case, compilation from source code is required (see procedure 2).
+* If the distribution you are using is Ubuntu or SuSE, go to Procedure 1.  
+* If you already compiled Boost C++ libraries from source code and installed them, go to Procedure 2.
+* If none of the coditions above are satisfied, compilation from source code is required. Go to procedure 3.
 
 ## 1. Installation of Boost C++ (Ubuntu and SuSE)
-For Ubuntu and SuSE distribution you can use one of the following commands:
+For Ubuntu and SuSE distribution, use one of the following commands:
 
 **Ubuntu (versions 14.04 or above)**  
 `sudo apt-get install libboost-all-dev`
 
 **SuSE (OpenSuSE/SLES v12 or above, or Tumbleweed)**   
-`sudo zypper install boost-devel`
+`sudo zypper install boost-devel`  
 
-## 2. Compilation and installation of Boost C++ from source code
+## 2. Boost C++ already available
+If you already compiled the Boost C++ libraries from the source code and you installed them, you just need to set the environment variable pointing at the location where the compiled Boost C++ libraries have been installed (i.e. the folder containing the `include` and `lib` subfolders):
+
+**bash or ksh**  
+`export BOOST4OPENSMOKEPP=/path/to/boost`
+
+**tcsh or csh**  
+`setenv BOOST4OPENSMOKEPP /path/to/boost`  
+
+## 3. Compilation and installation of Boost C++ from source code
 If you cannot install the Boost C++ libraries using the commands reported above, you need to download the source code and compile it.
 
 1. Download the source code from:  
