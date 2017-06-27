@@ -60,7 +60,7 @@ After compilation and installation, set the environment variable pointing at the
 In order to check if the environment is correctly configured, we compile and run a simple application based on OpenSMOKE++ and OpenFOAM.
 1. Go to the `TestEnvironment` folder
 2. Compile the source code by typing: `wmake`
-3. If compilation succeeded, run the solver by typing: `environmentTest`  
+3. If compilation succeeded, run the solver by typing: `testEnvironment`  
 
 If everything was done properly, you should have the following output on the screen:
 ```
